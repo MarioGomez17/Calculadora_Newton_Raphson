@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/Sistema.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='IMAGES/favicon.ico') }}">
+    <title>SISTEMA</title>
+</head>
+
+<body>
+    <div class="Contenido">
+        <div class="Titulo">
+            <h1>SISTEMA DE ECUACIONES</h1>
+        </div>
+        <div class="Formulario">
+            <form action="/Solucion" method="post">
+                {% for i in range(NumVar) %}
+                <div class="Funcion">
+                    <label for="input{{ i+1 }}">Función {{ i+1 }}</label>
+                    <input type="text" id="input{{ i+1 }}" name="Funcion{{ i+1 }}">
+                </div>
+                {% endfor %}
+                {% for i in range(NumVar) %}
+                <div class="Valores">
+                    <label for="input{{ i+1 }}">Valor Inicial de la Variable {{ i+1 }}</label>
+                    <input type="number" id="input{{ i+1 }}" name="ValorVariable{{ i+1 }}" value="0">
+                </div>
+                {% endfor %}
+                <div class="DivIteraciones">
+                    <label for="Iteraciones">Ingrese la cantidad de Iteraciones</label>
+                    <input type="number" id="Iteraciones" name="Iteraciones" value="10">
+                </div>
+                <div class="DivError">
+                    <label for="Error">Ingrese la tolerancia del Error</label>
+                    <input type="number" id="Error" name="Error" value="0.00001">
+                </div>
+                <div class="BotonEnviar">
+                    <input type="submit" value="Enviar" class="BtnEnviar">
+                </div>
+            </form>
+        </div>
+        <footer>
+            © Calculadora Newton - Raphson Multivariable de Mario Alberto Gómez Caicedo. Estudiante de Ingeniería de Sistemas de la Universidad de la Amazonia
+        </footer>
+    </div>
+</body>
+</html>

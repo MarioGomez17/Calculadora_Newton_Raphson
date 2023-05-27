@@ -1,0 +1,151 @@
+:root {
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #252525;
+    --azul: #007c9e;
+    --azulLink: #2feaff;
+    --FuentePrincipal: 'Poppins', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: var(--FuentePrincipal);
+    text-transform: uppercase;
+}
+
+body {
+    background-color: var(--gris);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--blanco);
+}
+
+.Contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contenido {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--azul);
+}
+
+.VectorSolucion span,
+.VectorError span,
+.ResultadoFinal span {
+    font-size: 1.5rem;
+}
+
+.MatrizJacobiana span {
+    font-size: 1.5rem;
+}
+.FuncionesInvertidas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.VectorSolucion,
+.VectorError,
+.ResultadoFinal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3.5rem 0;
+
+}
+
+.Jacobiana {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MatrizJacobiana {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-left: var(--blanco) 3px solid;
+    border-right: var(--blanco) 3px solid;
+    border-radius: 8px;
+    margin: 2.5rem 0;
+}
+
+.VectorSolucion, .ResultadoFinal{
+    border-radius: 10px;
+    border-left: var(--blanco) 3px solid;
+    border-right: var(--blanco) 3px solid;
+}
+
+.VectorSolucion span, .ResultadoFinal span{
+    margin: 1.5rem;
+}
+
+.MatrizJacobianaOriginal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MatrizJacobianaOriginal span {
+    margin: 0 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--azulLink);
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 2rem;
+    border: none;
+}
+
+footer{
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-size: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+}

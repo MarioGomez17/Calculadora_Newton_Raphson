@@ -1,0 +1,108 @@
+:root {
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #252525;
+    --FuentePrincipal: 'Poppins', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: var(--FuentePrincipal);
+    text-transform: uppercase;
+}
+
+body {
+    background-image: url('../IMAGES/FONDO.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Contenido {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--blanco);
+    font-size: 6rem;
+    margin: 0
+}
+
+.Funcion,
+.BotonEnviar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+
+input[type=text] {
+    font-family: var(--FuentePrincipal);
+    font-size: 1.5rem;
+    color: var(--negro);
+    text-indent: 1rem;
+    text-transform: lowercase;
+    width: 35rem;
+}
+
+input[type=number] {
+    font-family: var(--FuentePrincipal);
+    font-size: 1.5rem;
+    color: var(--negro);
+    text-indent: 1rem;
+    width: 10rem;
+}
+
+input {
+    border-radius: 20px;
+}
+
+.BtnEnviar {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: var(--FuentePrincipal);
+    text-transform: uppercase;
+}
+
+input,
+label {
+    margin: .3rem 1.5rem;
+}
+
+.DivError input {
+    width: 25rem;
+}
+
+footer{
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-size: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+}

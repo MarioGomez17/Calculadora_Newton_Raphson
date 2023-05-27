@@ -1,0 +1,70 @@
+:root {
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #252525;
+    --FuentePrincipal: 'Poppins', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: var(--FuentePrincipal);
+    text-transform: uppercase;
+}
+
+body {
+    background-image: url('../IMAGES/FONDO.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Contenido {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1{
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-size: 6rem;
+}
+
+span{
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    margin: 6rem;
+}
+
+.FuncionesInvertidas{
+    border-radius: 15px;
+    border-left: var(--blanco) 5px solid;
+    border-right: var(--blanco) 5px solid;
+}
+
+footer{
+    font-family: var(--FuentePrincipal);
+    color: var(--blanco);
+    font-size: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/Solucion.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='IMAGES/favicon.ico') }}">
+    <title>Solucion</title>
+</head>
+
+<body>
+    <div class="Contenedor">
+        <div class="Titulo">
+            <h1>Solución del Sistema de Ecuaciones</h1>
+        </div>
+        <div class="Contenido">
+            <div class="Jacobiana">
+                <h2>Resultados <a href="/Jacobiana">Matriz Jacobiana</a></h2>
+                {% for Elemento in SolucionesJacobiana %}
+                <div class="MatrizJacobiana">
+                    <table>
+                        {% for value in Elemento %}
+                        <tr>
+                            {% for num in value %}
+                            <td>
+                                <span>{{ num}}</span>
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="Vector">
+                <h2>Resultados <a href="/FuncionesInvertidas">Funciones Negativas</a></h2>
+                {% for Elemento in SolucionesFuncionesNegativas %}
+                <div class="VectorSolucion">
+                    {% for Valor in Elemento %}
+                    <span>{{ Valor }}</span>
+                    {% endfor %}
+                    <br>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="Error">
+                <h2>Error</h2>
+                {% for Elemento in Error %}
+                <div class="VectorError">
+                    <span>{{ Elemento }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="Solucion">
+                <h2>Resultado Final</h2>
+                <div class="ResultadoFinal">
+                    {% for Elemento in X %}
+                    <span>{{ Elemento }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <footer>
+            © Calculadora Newton - Raphson Multivariable de Mario Alberto Gómez Caicedo. Estudiante de Ingeniería de Sistemas de la Universidad de la Amazonia
+        </footer>
+    </div>
+</body>
+
+</html>
